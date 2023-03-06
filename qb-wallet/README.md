@@ -5,7 +5,7 @@
 
 # About
 - Script for QBCore.
-- The script allows you to buy a wallet in a store and then when using it, it gives the option of 4 slots to put the player's personal documents.
+- The script allows you to buy a wallet in a store and then when using it, it gives the option of 7 slots to put the player's personal documents.
 
 # Required
 - qb-core/shared/items.lua info
@@ -40,7 +40,7 @@
 - qb-shops/config.lua
  
 		 [20] = {
-			    name = "billetera",
+			    name = "wallet",
 			    price = 300,
 			    amount = 50,
 			    info = {},
