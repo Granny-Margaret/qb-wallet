@@ -1,10 +1,10 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
---wallet
-RegisterNetEvent('qb-items:client:use:wallet')
-AddEventHandler('qb-items:client:use:wallet', function()
-	TriggerServerEvent("inventory:server:OpenInventory", "stash", 'wallet', {maxweight = 10, slots = 7})
-	TriggerEvent("inventory:client:SetCurrentStash", 'wallet')
+--handy_wallet
+RegisterNetEvent('qb-items:client:use:handy_walletwallet')
+AddEventHandler('qb-items:client:use:handy_walletwallet', function()
+	TriggerServerEvent("inventory:server:OpenInventory", "stash", 'handy_wallet', {maxweight = 10, slots = 7})
+	TriggerEvent("inventory:client:SetCurrentStash", 'handy_walletwallet')
 end)
 
 -- Originally from Nema#2245
