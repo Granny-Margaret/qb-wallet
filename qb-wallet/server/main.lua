@@ -1,9 +1,9 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
-QBCore.Functions.CreateUseableItem("wallet", function(source, item)
+QBCore.Functions.CreateUseableItem("handy_wallet", function(source, item)
 	local Player = QBCore.Functions.GetPlayer(source)
 	if Player.Functions.GetItemBySlot(item.slot) ~= nil then
-        TriggerClientEvent('qb-items:client:use:wallet', source, item.info.walletid)
+        TriggerClientEvent('qb-items:client:use:handy_wallet', source, item.info.walletid)
     end
 end)
 
