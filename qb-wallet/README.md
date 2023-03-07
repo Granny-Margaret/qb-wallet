@@ -1,4 +1,4 @@
-# Wallet for qb-core
+# Handy wallet for qb-core
 # Originally from Nema#2245
 
 # Edited and Fixed by myself Granny Margaret 06-03-2023
@@ -10,14 +10,14 @@
 # Required
 - qb-core/shared/items.lua info
 
-		["wallet"] 			 = {["name"] = "wallet", 			["label"] = "Wallet", 		["weight"] = 500, 		["type"] = "item", 		["image"] = "wallet.png", 			["unique"] = true, 		["useable"] = true, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Wallet)"},
+		["handy_wallet"] 			 = {["name"] = "handy_wallet", 			["label"] = "Handy Wallet", 		["weight"] = 500, 		["type"] = "item", 		["image"] = "wallet.png", 			["unique"] = true, 		["useable"] = true, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Handy Wallet)"},
 
 
 
 # - go to qb-inventory\html\js\app.js
 # Find: stickynote and paste below
 
-	} else if (itemData.name == "wallet") {
+	} else if (itemData.name == "handy_wallet") {
 		    $(".item-info-title").html('<p>'+itemData.label+'</p>')
 		    $(".item-info-description").html('<p><strong>Identification number wallet: </strong><span>' + itemData.info.walletid);
 
@@ -27,22 +27,22 @@
 
 - After that if and cash put this: 
 	
-		if itemData.name == 'wallet' then itemData.info.walletid = math.random(11111,99999) end -- wallet item
+		if itemData.name == 'handy_wallet' then itemData.info.walletid = math.random(11111,99999) end -- handy_wallet item
 
 # Find:
 - **elseif itemData["name"] == "markedbills" then**
 
 - After that elseif put this:
 
-		elseif itemData['name'] == 'wallet' then
+		elseif itemData['name'] == 'handy_wallet' then
 							info.walletid = math.random(11111,99999)
 
 - qb-shops/config.lua
  
 		 [20] = {
-			    name = "wallet",
-			    price = 300,
-			    amount = 50,
+			    name = "handy_wallet",
+			    price = 25,
+			    amount = 150,
 			    info = {},
 			    type = "item",
 			    slot = 20,
@@ -51,5 +51,5 @@
 
 - jim-shops/config.lua
 
-{ name = "wallet", price = 25, amount = 150, },
+{ name = "handy_wallet", price = 25, amount = 150, },
 
